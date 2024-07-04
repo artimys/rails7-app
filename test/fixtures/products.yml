@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  sku: MyString
+  is_hidden: false
+  is_discontinued: false
+
+two:
+  sku: MyString
+  is_hidden: false
+  is_discontinued: false
