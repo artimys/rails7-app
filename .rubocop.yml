@@ -18,4 +18,5 @@ Metrics/BlockLength:
     - 'config/environments/development.rb'
 
 AllCops:
+  NewCops: enable
   SuggestExtensions: false

@@ -16,8 +16,8 @@ ActiveRecord::Schema[7.1].define(version: 2024_07_04_225525) do
 
   create_table "products", force: :cascade do |t|
     t.string "sku", limit: 50
-    t.boolean "is_hidden", default: false
-    t.boolean "is_discontinued", default: false
+    t.boolean "is_hidden", default: false, null: false
+    t.boolean "is_discontinued", default: false, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
