@@ -19,6 +19,9 @@ jobs:
           bundler-cache: true
           # ruby-version: '3.3.4' # Not needed with a .ruby-version file
 
+      - name: Update net-pop
+        run: bundle update net-pop
+
       - name: Run rubocop
         run: bundle exec rubocop --parallel
 
