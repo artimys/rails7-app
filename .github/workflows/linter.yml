@@ -6,17 +6,21 @@ on: [pull_request]
 
 jobs:
   lint:
-    name: rubocop
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
     steps:
-      - uses: actions/checkout@v4
-      - uses: ruby/setup-ruby@v1 # https://github.com/ruby/setup-ruby
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install Ruby and gems
+        uses: ruby/setup-ruby@v1 # https://github.com/ruby/setup-ruby
         with:
           bundler-cache: true
           # ruby-version: '3.3.4' # Not needed with a .ruby-version file
-      - name: rubocop
+
+      - name: Run rubocop
         run: bundle exec rubocop --parallel
-      # - name: erb-lint
+
+      # - name: Run erb-lint
       #   run: bundle exec erblint --lint-all
