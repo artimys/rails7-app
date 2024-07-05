@@ -66,3 +66,6 @@ group :test do
   gem 'capybara'
   gem 'selenium-webdriver'
 end
+
+# Needed until Ruby 3.3.4 is released https://github.com/ruby/ruby/pull/11006
+gem 'net-pop', github: 'ruby/net-pop'
